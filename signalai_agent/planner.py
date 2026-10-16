@@ -27,7 +27,7 @@ class CapabilityPlanner:
     def _validate_plan(self, raw: dict) -> AgentPlan:
         raw_steps = raw.get("steps", [])
         if not isinstance(raw_steps, list):
-            raise ValueError("invalid_llm_plan_steps")
+            raise TypeError("invalid_llm_plan_steps")
         steps: list[PlanStep] = []
         for raw_step in raw_steps[: settings.max_steps]:
             if not isinstance(raw_step, dict):
