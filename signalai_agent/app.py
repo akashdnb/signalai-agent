@@ -31,4 +31,4 @@ async def ready() -> dict[str, str]:
 
 @app.post("/v1/plan", response_model=AgentPlan, dependencies=[Depends(require_service_token)])
 async def plan(request: AgentRequest) -> AgentPlan:
-    return planner.plan(request)
+    return await planner.plan(request)
