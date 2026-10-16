@@ -11,5 +11,13 @@ services:
         sync: false
       - key: SIGNALAI_SERVICE_TOKEN
         sync: false
+      - key: SIGNALAI_LLM_BASE_URL
+        sync: false
+      - key: SIGNALAI_LLM_API_KEY
+        sync: false
+      - key: SIGNALAI_LLM_MODEL
+        sync: false
+      - key: SIGNALAI_LLM_TIMEOUT_SECONDS
+        value: "60"
       - key: SIGNALAI_MAX_STEPS
         value: "8"
