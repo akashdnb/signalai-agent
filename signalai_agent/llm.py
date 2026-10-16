@@ -50,5 +50,5 @@ class LLMPlanner:
         content = body["choices"][0]["message"]["content"]
         parsed = json.loads(content)
         if not isinstance(parsed, dict):
-            raise ValueError("invalid_llm_plan")
+            raise TypeError("invalid_llm_plan")
         return parsed
